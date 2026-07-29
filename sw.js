@@ -1,7 +1,8 @@
-const CACHE = 'capiguia-v2';
+const CACHE = 'capiguia-v3';
 const ASSETS = ['./', './index.html', './manifest.json',
                 './icon-192.png', './icon-512.png', './favicon.png',
-                './Como_trabajamos_lectura_y_problemas.docx'];
+                './Como_trabajamos_lectura_y_problemas.docx',
+                './Atencion_a_la_diversidad_en_el_aula.docx'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
