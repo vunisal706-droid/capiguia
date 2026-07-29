@@ -163,6 +163,23 @@ summary:focus-visible{outline:3px solid var(--rojo);outline-offset:-3px}
 .mes ul{margin:0;padding-left:18px;font-size:14.5px}
 .mes li{margin-bottom:3px}
 
+
+/* descarga */
+.descarga{display:flex;gap:16px;align-items:center;flex-wrap:wrap;
+  background:linear-gradient(135deg,#fff7ed 0%,#fef2f2 100%);
+  border:2px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:16px}
+.descarga .doc{flex:0 0 auto;width:52px;height:52px;border-radius:12px;background:var(--rojo);
+  display:flex;align-items:center;justify-content:center}
+.descarga .txt{flex:1 1 260px;min-width:220px}
+.descarga .txt b{display:block;font-size:16px;margin-bottom:3px}
+.descarga .txt span{font-size:14.5px;color:var(--muted);line-height:1.45}
+.descarga a.btn{flex:0 0 auto;background:var(--rojo);color:#fff;text-decoration:none;
+  font-weight:700;font-size:15px;padding:13px 22px;border-radius:12px;min-height:48px;
+  display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer}
+.descarga a.btn:hover{background:var(--rojo-oscuro)}
+.descarga a.btn:active{transform:scale(.97)}
+.descarga a.btn:focus-visible{outline:3px solid var(--text);outline-offset:3px}
+@media print{.descarga{display:none}}
 .sin-resultados{display:none;text-align:center;padding:40px 20px;color:var(--muted);font-size:17px}
 footer{border-top:1px solid var(--border);padding:24px 0 40px;color:var(--muted);font-size:14px}
 .oculto{display:none !important}
@@ -205,6 +222,8 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
       <a href="#objetivos">Los 4 objetivos</a>
       <a href="#primera">Primera semana</a>
       <a href="#tiempos">Tiempos obligatorios</a>
+      <a href="#lectura">Cómo se trabaja la lectura</a>
+      <a href="#problemas">Cómo se resuelven problemas</a>
       <a href="#evaluar">Evaluar</a>
       <a href="#dificultades">Si no avanza</a>
       <a href="#promocion">Promoción</a>
@@ -295,9 +314,313 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
   </div>
 </section>
 
+
 <!-- 4 ---------------------------------------------------------------->
+<section id="lectura">
+  <h2><span class="num">4</span> Cómo se trabaja la lectura</h2>
+  <p class="sub">El método es el mismo de primero a sexto. Lo que cambia es la dificultad del texto,
+     nunca el método.</p>
+  <div class="descarga">
+    <div class="doc" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15l3 3 3-3"/>
+      </svg>
+    </div>
+    <div class="txt">
+      <b>Cómo trabajamos la lectura y los problemas</b>
+      <span>El documento completo del centro, en Word: nueve páginas con el método entero, las
+        rúbricas, qué hacer ante cada dificultad y los errores frecuentes. Imprímelo y tenlo encima de la mesa.</span>
+    </div>
+    <a class="btn" href="Como_trabajamos_lectura_y_problemas.docx"
+       download="Como trabajamos lectura y problemas - CEIP Capitulaciones.docx">
+      Descargar Word
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>La sesión diaria: tres pasos, siempre iguales</h3>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Paso</th><th>Tiempo</th><th>Qué se hace</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1 · ANTES</strong></td><td>5 min</td>
+              <td>¿De qué creéis que va? Título, imágenes y las palabras de vocabulario de la
+                  semana. Y sobre todo: <strong>decir para qué vamos a leer</strong>.</td></tr>
+          <tr><td><strong>2 · LEEMOS</strong></td><td>15 min</td>
+              <td>Lectura con una actividad concreta: en voz alta, coral, por turnos, en pareja,
+                  subrayando… con paradas para comprobar que se sigue.</td></tr>
+          <tr><td><strong>3 · DESPUÉS</strong></td><td>10 min</td>
+              <td>¿Qué hemos entendido? Preguntas de los tres niveles, y una actividad pequeña:
+                  dibujo, resumen u opinión.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="aviso a-info" style="margin-bottom:0"><strong>La pregunta que más rendimiento da</strong>
+      «¿Para qué vamos a leer esto?». Quien sabe si lee para buscar un dato, para seguir unas
+      instrucciones o para disfrutar, lee de otra manera. Quien no lo sabe, lee por leer.</div>
+  </div>
+
+  <div class="card">
+    <h3>La semana</h3>
+    <p>De <strong>lunes a jueves</strong>, un texto distinto cada día, sin repetir dos días seguidos
+       el mismo tipo. El <strong>viernes</strong>, lectura libre del itinerario lector o de la
+       biblioteca. Dentro del mes la dificultad sube: la semana 1 es la más accesible y la última
+       lleva el mayor reto, que suele ser crear, opinar o debatir.</p>
+  </div>
+
+  <div class="card">
+    <h3>Los tres niveles de pregunta</h3>
+    <p>Se preguntan siempre en este orden y con estos nombres, que el alumnado tiene que reconocer.</p>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Nivel</th><th>Cómo se pregunta</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1 · Lo que dice el texto</strong><br><span style="color:var(--muted);font-size:13px">literal</span></td>
+              <td>¿Quién? ¿Dónde? ¿Cuándo? ¿Qué hizo?</td>
+              <td>¿Dónde vivía la protagonista?</td></tr>
+          <tr><td><strong>2 · Leer entre líneas</strong><br><span style="color:var(--muted);font-size:13px">inferencial</span></td>
+              <td>¿Por qué? ¿Qué crees que pasará? ¿Cómo se sentía?</td>
+              <td>¿Por qué crees que no quiso abrir la puerta?</td></tr>
+          <tr><td><strong>3 · Opinar</strong><br><span style="color:var(--muted);font-size:13px">crítico</span></td>
+              <td>¿Estás de acuerdo? ¿Qué habrías hecho tú? ¿Para qué lo escribió?</td>
+              <td>¿Te parece bien lo que hizo? ¿Por qué?</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="aviso a-ok"><strong>De cada cinco preguntas: dos, dos y una</strong>
+      Dos del nivel 1, dos del 2 y una del 3. El error más extendido es quedarse en el nivel 1, que
+      es el más rápido de corregir y el que menos enseña.</div>
+    <div class="aviso a-warn" style="margin-bottom:0"><strong>Y siempre: «¿dónde lo pone?»</strong>
+      Ninguna respuesta de nivel 2 o 3 se da por buena sin que diga en qué parte del texto se apoya.
+      Es la pregunta que más comprensión enseña.</div>
+  </div>
+
+  <details>
+    <summary>El vocabulario: ocho palabras al mes</summary>
+    <div class="details-body">
+      <p>Ocho palabras al mes relacionadas con la temática, dos o tres por semana. Se presentan
+         <strong>el lunes, en el paso ANTES</strong>, y se repasan un minuto cada día.</p>
+      <ul class="check">
+        <li>Se eligen las que impiden comprender el texto, no las raras ni las curiosas.</li>
+        <li>Se presentan dentro de una frase, nunca con una definición suelta.</li>
+        <li>Van al <strong>muro de palabras</strong> del aula, visible mientras se trabajan.</li>
+        <li>Cada alumno las recoge en su <strong>diccionario individual</strong>: la palabra, una
+            frase propia y un dibujo o sinónimo. Copiar la definición no sirve.</li>
+        <li>Tienen que <strong>volver a aparecer</strong> al menos tres veces en las semanas
+            siguientes. Sin reutilización no hay aprendizaje de vocabulario.</li>
+      </ul>
+      <p style="margin-top:10px;color:var(--muted);font-size:15px">La rotación de actividades por
+         ciclo está en el Plan de Lectura.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>La fluidez: cómo se mide en tres minutos</summary>
+    <div class="details-body">
+      <p><strong>Leer bien no es leer rápido.</strong> Son tres cosas: sin errores, a buen ritmo y
+         con entonación. La tercera es la que más dice sobre si comprende.</p>
+      <p>Se mide en <strong>octubre y en mayo</strong>, uno a uno, en un rincón mientras el resto
+         trabaja:</p>
+      <ol class="pasos">
+        <li>Dos copias de un texto que no conozca, de su nivel.</li>
+        <li>«Lee en voz alta como tú lees normalmente». Sin decirle que le cronometras.</li>
+        <li>Un minuto exacto. Marcas en tu copia cada palabra fallada.</li>
+        <li>Palabras leídas menos falladas. Eso son sus palabras por minuto.</li>
+        <li>Anotas tres cosas: las palabras por minuto, si se autocorrige y si respeta los puntos.</li>
+      </ol>
+      <p style="margin-top:12px"><strong>Es fallo</strong> saltarse la palabra, decir otra,
+         inventarla o pararse más de tres segundos. <strong>No es fallo</strong> equivocarse y
+         corregirse solo, repetir una palabra o leer con acento andaluz.</p>
+      <div class="tabla-wrap" style="margin-top:12px">
+        <table><thead><tr><th>Lo que te sale</th><th>Qué haces</th></tr></thead><tbody>
+          <tr><td>En su rango y con entonación</td><td>Nada especial.</td></tr>
+          <tr><td>En su rango pero de carrerilla, sin entonación</td>
+              <td>Lectura eco y teatro leído, dos veces por semana, diez minutos.</td></tr>
+          <tr><td>Muy por debajo</td>
+              <td>Lectura repetida cinco minutos diarios en grupo pequeño. Y mientras tanto, en las
+                  demás áreas, léele tú los enunciados.</td></tr>
+        </tbody></table>
+      </div>
+      <div class="aviso a-err" style="margin-bottom:0"><strong>Nunca</strong>
+        Ni carreras, ni comparaciones en voz alta, ni colgar resultados, ni hacer leer en público sin
+        preparación a quien lee mal. La fluidez no se califica: se mide para saber a quién ayudar.
+        Lo que importa no es el número de octubre, sino la diferencia con el de mayo.</div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Si no comprende: averigua primero por qué</summary>
+    <div class="details-body">
+      <p>La prueba dura un minuto: <strong>léele tú el texto en voz alta</strong> y hazle las mismas
+         preguntas.</p>
+      <div class="tabla-wrap">
+        <table><thead><tr><th>Qué pasa</th><th>Qué significa</th><th>Qué haces</th></tr></thead>
+          <tbody>
+            <tr><td>Se lo lees y entiende</td><td>Es descodificación, no comprensión</td>
+                <td>Fluidez diaria en grupo pequeño. Y en las demás áreas, dale el texto leído.</td></tr>
+            <tr><td>Se lo lees y sigue sin entender</td><td>Es comprensión o vocabulario</td>
+                <td>Textos más cortos con las mismas preguntas y vocabulario previo intensivo.</td></tr>
+            <tr><td>Entiende pero no sabe explicarlo</td><td>Es expresión</td>
+                <td>Acepta respuesta oral, dibujo o señalar en el texto. No se penaliza dos veces.</td></tr>
+            <tr><td>Solo responde lo literal</td><td>Lo más habitual</td>
+                <td>Piensa en voz alta delante de él: muestra cómo se deduce.</td></tr>
+          </tbody></table>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- 5 ---------------------------------------------------------------->
+<section id="problemas">
+  <h2><span class="num">5</span> Cómo se resuelven los problemas</h2>
+  <p class="sub">Cinco pasos, con estos cinco nombres, del problema más sencillo de primero al más
+     complejo de sexto.</p>
+  <div class="descarga">
+    <div class="doc" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15l3 3 3-3"/>
+      </svg>
+    </div>
+    <div class="txt">
+      <b>Cómo trabajamos la lectura y los problemas</b>
+      <span>El documento completo del centro, en Word: nueve páginas con el método entero, las
+        rúbricas, qué hacer ante cada dificultad y los errores frecuentes.</span>
+    </div>
+    <a class="btn" href="Como_trabajamos_lectura_y_problemas.docx"
+       download="Como trabajamos lectura y problemas - CEIP Capitulaciones.docx">
+      Descargar Word
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Paso</th><th>Qué hace el alumnado</th><th>Qué le preguntas</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1 · Leo y entiendo</strong></td>
+              <td>Lee despacio, subraya los datos y rodea la pregunta. Cuenta el problema con sus
+                  palabras sin mirar.</td>
+              <td>¿Qué te cuentan? ¿Qué te piden?</td></tr>
+          <tr><td><strong>2 · Dibujo o represento</strong></td>
+              <td>Lo hace visible: dibujo, esquema, tabla o material. <strong>En los primeros cursos
+                  es obligatorio.</strong></td>
+              <td>¿Cómo lo dibujarías?</td></tr>
+          <tr><td><strong>3 · Elijo cómo resolverlo</strong></td>
+              <td>Decide la estrategia y explica el porqué <em>antes</em> de calcular.</td>
+              <td>¿Qué vas a hacer? ¿Por qué restas y no sumas?</td></tr>
+          <tr><td><strong>4 · Resuelvo</strong></td>
+              <td>Hace la operación con orden y calma.</td>
+              <td>(Aquí tú callas y le dejas trabajar.)</td></tr>
+          <tr><td><strong>5 · Compruebo</strong></td>
+              <td>¿Tiene sentido? Escribe la solución con una frase completa y se la explica a un
+                  compañero.</td>
+              <td>¿Puede ser más de lo que había? Explícamelo.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="aviso a-info" style="margin-bottom:0"><strong>Dónde falla la gente de verdad</strong>
+      En los pasos 1, 2 y 5. Casi nadie falla calculando: falla porque no ha entendido el enunciado o
+      porque no comprueba nada. Y son justo los pasos a los que menos tiempo dedicamos.</div>
+  </div>
+
+  <div class="card">
+    <h3>Cada semana del mes hace una cosa distinta</h3>
+    <div class="tabla-wrap">
+      <table><thead><tr><th>Semana</th><th>Fase</th><th>Qué se hace</th></tr></thead><tbody>
+        <tr><td><strong>1</strong></td><td>Entender el problema</td>
+            <td>Material y dibujos. Solo comprensión del enunciado. <strong>No se resuelve
+                todavía.</strong></td></tr>
+        <tr><td><strong>2</strong></td><td>Elegir la estrategia</td>
+            <td>Problemas guiados en gran grupo, comparando qué estrategia conviene y por qué.</td></tr>
+        <tr><td><strong>3</strong></td><td>Resolver con autonomía</td>
+            <td>Cada uno resuelve y comprueba. Tú atiendes a quien lo necesita.</td></tr>
+        <tr><td><strong>4</strong></td><td>Inventar problemas</td>
+            <td>Inventan problemas del tipo trabajado y los resuelve la clase.</td></tr>
+      </tbody></table>
+    </div>
+    <div class="aviso a-warn" style="margin-bottom:0"><strong>Consecuencia práctica</strong>
+      En la semana 1 no se penaliza no llegar al resultado, porque no es lo que se trabaja. Y en la
+      semana 4, un problema inventado que esté mal construido te dice exactamente qué no ha
+      entendido su autor.</div>
+  </div>
+
+  <details>
+    <summary>Cuidado con las palabras clave</summary>
+    <div class="details-body">
+      <p>Enseñar que «en total» es sumar y «le quedan» es restar funciona… hasta que deja de
+         funcionar, y entonces hace daño. En «<em>tenía algunos, le dieron 5 y ahora tiene 13</em>»
+         la palabra «dieron» invita a sumar y hay que restar.</p>
+      <p><strong>En este centro no se enseñan palabras clave.</strong> Se enseña a representar la
+         situación, que es lo que sí funciona siempre. Por eso el paso 2 es obligatorio en los
+         primeros cursos.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Qué hacer ante cada error</summary>
+    <div class="details-body">
+      <div class="tabla-wrap">
+        <table><thead><tr><th>Dónde falla</th><th>Qué NO hacer</th><th>Qué hacer</th></tr></thead>
+          <tbody>
+            <tr><td>No entiende el enunciado</td><td>Explicárselo con otras palabras y seguir</td>
+                <td>Es lectura. Leedlo juntos, subrayad datos y pregunta, y que lo cuente con sus
+                    palabras antes de tocar un número.</td></tr>
+            <tr><td>Elige mal la operación</td><td>Decirle cuál es</td>
+                <td>Vuelta al paso 2: que lo dibuje. Al ver la situación, la operación aparece
+                    sola.</td></tr>
+            <tr><td>Se equivoca al calcular</td><td>Suspender el problema</td>
+                <td>Son criterios distintos. Se anota por separado y, si evalúas resolver, dale
+                    calculadora o tabla.</td></tr>
+            <tr><td>No comprueba nunca</td><td>Recordárselo cada vez</td>
+                <td>Dale problemas con resultados absurdos a propósito, para que descubra que
+                    comprobar sirve.</td></tr>
+            <tr><td>Resuelve bien pero no lo explica</td><td>Darlo por bueno sin más</td>
+                <td>Que se lo explique a un compañero. Si no puede, la comprensión es frágil aunque
+                    el resultado esté bien.</td></tr>
+            <tr><td>Se bloquea y no empieza</td><td>Dejarle copiar</td>
+                <td>Paso 1 en voz alta con él y el mismo problema con números mucho más pequeños.
+                    Cuando lo resuelve, le devuelves los originales.</td></tr>
+          </tbody></table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Tipos de problema que hay que garantizar</summary>
+    <div class="details-body">
+      <p>El fallo típico es que el alumnado solo vea un tipo de problema por operación. Hay que
+         asegurar estos:</p>
+      <ul class="check">
+        <li><strong>Cambio:</strong> una cantidad que aumenta o disminuye.</li>
+        <li><strong>Combinación:</strong> dos partes que forman un todo.</li>
+        <li><strong>Comparación:</strong> ¿cuántos más tiene?</li>
+        <li><strong>Igualación:</strong> ¿cuántos le faltan para tener los mismos?</li>
+        <li><strong>Con la incógnita al principio:</strong> «le dieron 5 y ahora tiene 13, ¿cuántos
+            tenía?».</li>
+        <li><strong>De dos operaciones</strong>, con un paso intermedio que nadie pide.</li>
+        <li><strong>Con datos que sobran</strong>, como en la vida real.</li>
+        <li><strong>Sin solución o con varias.</strong> No todo problema tiene un número detrás.</li>
+      </ul>
+      <p style="margin-top:10px">Los dos que más discriminan entre comprender y aplicar una rutina
+         son los de <strong>incógnita al principio</strong> y los que tienen <strong>datos que
+         sobran</strong>. Deben aparecer desde primer ciclo, aunque sea con números pequeños.</p>
+    </div>
+  </details>
+
+  <div class="aviso a-ok"><strong>Lo que comparten la lectura y los problemas</strong>
+    Antes de leer, para qué voy a leer. Leo y entiendo, qué me preguntan. En los dos casos lo que
+    enseña no es la tarea: es la parada. Parar a comprobar si se ha entendido y parar al final a
+    explicar lo hecho. Comprender el enunciado de un problema y comprender un texto son la misma
+    competencia.</div>
+</section>
+
+<!-- 6 ---------------------------------------------------------------->
 <section id="evaluar">
-  <h2><span class="num">4</span> Cómo se evalúa aquí</h2>
+  <h2><span class="num">6</span> Cómo se evalúa aquí</h2>
   <p class="sub">Esta es la parte donde más se falla. Cinco reglas y una tabla.</p>
 
   <div class="card">
@@ -369,9 +692,9 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
   </details>
 </section>
 
-<!-- 5 ---------------------------------------------------------------->
+<!-- 7 ---------------------------------------------------------------->
 <section id="dificultades">
-  <h2><span class="num">5</span> Si un alumno no avanza</h2>
+  <h2><span class="num">7</span> Si un alumno no avanza</h2>
   <p class="sub">Regla de oro: <strong>lo primero que se cambia es la tarea, no el alumno de
      sitio.</strong> La evaluación psicopedagógica no es el primer paso, es el último.</p>
 
@@ -436,9 +759,9 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
   </details>
 </section>
 
-<!-- 6 ---------------------------------------------------------------->
+<!-- 8 ---------------------------------------------------------------->
 <section id="promocion">
-  <h2><span class="num">6</span> Promoción, en tres pasos</h2>
+  <h2><span class="num">8</span> Promoción, en tres pasos</h2>
   <p class="sub">Se decide en equipo docente al final de cada ciclo. Si no hay consenso, por mayoría
      de dos tercios.</p>
   <div class="card">
@@ -457,9 +780,9 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
     Entrevista con la familia durante junio, con constancia escrita.</div>
 </section>
 
-<!-- 7 ---------------------------------------------------------------->
+<!-- 9 ---------------------------------------------------------------->
 <section id="convivencia">
-  <h2><span class="num">7</span> Convivencia</h2>
+  <h2><span class="num">9</span> Convivencia</h2>
   <div class="grid grid-2">
     <div class="card"><h3>Lo que haces siempre</h3>
       <ul class="check">
@@ -481,9 +804,9 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
     indicio de acoso, el protocolo se activa <strong>el mismo día</strong>.</div>
 </section>
 
-<!-- 8 ---------------------------------------------------------------->
+<!-- 10 ---------------------------------------------------------------->
 <section id="absentismo">
-  <h2><span class="num">8</span> Absentismo</h2>
+  <h2><span class="num">10</span> Absentismo</h2>
   <p class="sub">Es el primer objetivo del centro porque sin asistencia no funciona ninguna medida.</p>
   <div class="card">
     <ol class="pasos">
@@ -500,9 +823,9 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
     se ha podido observar y se le da otra oportunidad.</div>
 </section>
 
-<!-- 9 ---------------------------------------------------------------->
+<!-- 11 ---------------------------------------------------------------->
 <section id="familias">
-  <h2><span class="num">9</span> Comunicación con las familias</h2>
+  <h2><span class="num">11</span> Comunicación con las familias</h2>
   <div class="grid grid-2">
     <div class="card" style="border-left:5px solid var(--ok)">
       <h3>Canal oficial: Séneca / iPasen</h3>
@@ -529,7 +852,7 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
 
 <!-- 10 --------------------------------------------------------------->
 <section id="curso">
-  <h2><span class="num">10</span> El curso, mes a mes</h2>
+  <h2><span class="num">12</span> El curso, mes a mes</h2>
   <p class="sub">Lo que te toca a ti como tutor o tutora.</p>
   <div class="meses">
     <div class="mes"><b>Septiembre</b><ul>
@@ -570,7 +893,7 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
 
 <!-- 11 --------------------------------------------------------------->
 <section id="programacion">
-  <h2><span class="num">11</span> Tu programación</h2>
+  <h2><span class="num">13</span> Tu programación</h2>
   <div class="card">
     <h3>Quién hace qué</h3>
     <div class="tabla-wrap">
@@ -599,12 +922,13 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
 
 <!-- 12 --------------------------------------------------------------->
 <section id="donde">
-  <h2><span class="num">12</span> Dónde está cada cosa</h2>
+  <h2><span class="num">14</span> Dónde está cada cosa</h2>
   <p class="sub">Si necesitas el detalle, esto es lo que tienes que abrir.</p>
   <div class="tabla-wrap">
     <table>
       <thead><tr><th>Si buscas…</th><th>Mira en…</th></tr></thead>
       <tbody>
+        <tr><td>El método de lectura y de problemas, con todo el detalle</td><td>«Cómo trabajamos la lectura y los problemas» (<a href="Como_trabajamos_lectura_y_problemas.docx" download style="color:var(--rojo);font-weight:600">descargar</a>), Plan de Lectura y Plan de Resolución de Problemas</td></tr>
         <tr><td>Los objetivos del centro</td><td>Proyecto educativo, apartado A</td></tr>
         <tr><td>Qué se enseña y los saberes básicos</td><td>Apartado C</td></tr>
         <tr><td>Criterios de evaluación y promoción</td><td>Apartado E</td></tr>
@@ -624,7 +948,7 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
 
 <!-- 13 --------------------------------------------------------------->
 <section id="acogida">
-  <h2><span class="num">13</span> Acogida</h2>
+  <h2><span class="num">15</span> Acogida</h2>
   <p class="sub">Cómo recibe el centro a quien llega nuevo, sea alumnado o profesorado.</p>
 
   <div class="card">
@@ -679,7 +1003,7 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
 
 <!-- 14 --------------------------------------------------------------->
 <section id="apps">
-  <h2><span class="num">14</span> Las herramientas del centro</h2>
+  <h2><span class="num">16</span> Las herramientas del centro</h2>
   <p class="sub">Profesorado del centro ha desarrollado varias aplicaciones propias.
      <strong>Su uso es voluntario</strong>: quien prefiera papel trabaja igual. Se cuentan aquí
      porque ahorran bastante tiempo.</p>
@@ -726,7 +1050,7 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
 
 <!-- 15 --------------------------------------------------------------->
 <section id="faq">
-  <h2><span class="num">15</span> Preguntas frecuentes</h2>
+  <h2><span class="num">17</span> Preguntas frecuentes</h2>
   <p class="sub">Las que más se repiten en la sala de profesores.</p>
 
   <details><summary>¿Puedo poner exámenes?</summary><div class="details-body">
@@ -803,7 +1127,7 @@ mark{background:#fef08a;padding:0 2px;border-radius:3px}
 
 <!-- 16 --------------------------------------------------------------->
 <section id="errores">
-  <h2><span class="num">16</span> Los errores más frecuentes</h2>
+  <h2><span class="num">18</span> Los errores más frecuentes</h2>
   <div class="card">
     <ul class="check">
       <li>Calificar por la media de los exámenes sin pasar por los criterios.</li>
