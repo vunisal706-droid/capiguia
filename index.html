@@ -125,6 +125,31 @@ summary:focus-visible{outline:2px solid var(--vino);outline-offset:-2px}
 .aviso strong:first-child{display:block;margin-bottom:3px}
 
 .tabla-wrap{overflow-x:auto;border:1px solid var(--linea);border-radius:10px;background:#fff;margin:4px 0}
+/* Mapa de contenidos por curso */
+.sc-filtros{display:flex;flex-wrap:wrap;gap:10px;margin:2px 0 14px}
+.sc-filtros label{display:flex;flex-direction:column;gap:4px;font-size:12.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.05em;color:#667;flex:1 1 190px;min-width:0}
+.sc-filtros select{font-family:inherit;font-size:15px;padding:9px 12px;border-radius:9px;
+  border:1px solid var(--linea);background:#fff;color:inherit;width:100%;max-width:100%;min-width:0;
+  text-overflow:ellipsis;white-space:nowrap;overflow:hidden;cursor:pointer}
+.sc-area{margin:0 0 16px}
+.sc-area h4{margin:0 0 6px;font-size:15.5px;color:var(--tinta)}
+.sc-lista{margin:0;border:1px solid var(--linea);border-radius:10px;background:#fff;overflow:hidden}
+.sc-lista dt{font-weight:700;font-size:14.2px;padding:9px 13px 1px}
+.sc-lista dd{margin:0;padding:0 13px 9px;font-size:14.6px;line-height:1.6;color:#4a5568;
+  border-bottom:1px solid var(--linea)}
+.sc-lista dd:last-child{border-bottom:0}
+.sc-tabla{min-width:760px}
+.sc-tabla td{vertical-align:top;font-size:13.6px}
+.sc-tabla th[scope=row]{white-space:nowrap;font-size:13.8px}
+.sc-no{color:#aab}
+.sc-bajar{display:flex;align-items:flex-end}
+.sc-bajar a{display:inline-flex;align-items:center;gap:7px;background:var(--vino);color:#fff;
+  text-decoration:none;font-weight:700;font-size:14.5px;padding:10px 16px;border-radius:9px;
+  white-space:nowrap;border:0;line-height:1.2}
+.sc-bajar a:hover{background:var(--vino-osc)}
+.sc-bajar a:focus-visible{outline:2px solid var(--tinta);outline-offset:3px}
+@media(max-width:520px){.sc-bajar{flex:1 1 100%}.sc-bajar a{width:100%;justify-content:center}}
 table{border-collapse:collapse;width:100%;min-width:500px;font-size:14.8px}
 th{background:var(--crema);text-align:left;padding:10px 12px;font-weight:700;
   border-bottom:1px solid var(--linea);color:var(--vino-osc);font-size:14px}
@@ -225,6 +250,7 @@ a{color:var(--vino)}
       <a href="#familias">Familias</a>
       <a href="#curso">Mes a mes</a>
       <a href="#programacion">Programación</a>
+      <a href="#secuencia">Qué se da en cada curso</a>
       <a href="#donde">Dónde está cada cosa</a>
       <a href="#acogida">Acogida</a>
       <a href="#apps">Herramientas</a>
@@ -952,8 +978,110 @@ a{color:var(--vino)}
 </section>
 
 <!-- 14 --------------------------------------------------------------->
+<section id="secuencia">
+  <h2><span class="num">14</span> Qué se da en cada curso</h2>
+
+  <details><summary>¿Qué contenidos me tocan a mí este curso?</summary><div class="details-body">
+    <p>Elige tu curso y verás los grandes contenidos de cada área. Si das clase a un grupo con
+       niveles distintos, cambia el curso y compara: ahí está lo que unos ya traen y lo que a
+       otros les falta.</p>
+
+    <div class="sc-filtros">
+      <label for="scVista">Ver
+        <select id="scVista">
+          <option value="curso">Por curso</option>
+          <option value="area">Evolución de un área</option>
+        </select>
+      </label>
+      <label for="scCurso" id="scCursoLabel">Curso
+        <select id="scCurso"></select>
+      </label>
+      <label for="scArea" id="scAreaLabel" hidden>Área
+        <select id="scArea"></select>
+      </label>
+      <div class="sc-bajar">
+        <a id="scDescarga" href="descargas/Que_se_trabaja_en_1_Primaria.pdf" download>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/>
+          </svg><span id="scDescargaTxt">Descargar</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="scSalida"></div>
+
+    <div class="aviso a-info" style="margin-bottom:0"><strong>Es una guía, no un temario cerrado</strong>
+      Esto no obliga a dar estos contenidos en este orden ni en este curso. Ajusta la secuencia al
+      ritmo real de tu grupo, a lo que salga en la evaluación inicial y a las medidas de atención a
+      la diversidad que necesites: un contenido puede adelantarse, dejarse para el curso siguiente,
+      reforzarse más tiempo o darse de otra forma. Lo que evalúas son los criterios de evaluación,
+      no esta lista.</div>
+  </div></details>
+
+  <details><summary>¿Para qué me sirve mirar el curso anterior y el siguiente?</summary><div class="details-body">
+    <p>Para dos cosas muy concretas. La primera, <strong>no dar por sabido lo que no se ha dado</strong>:
+       si en tu curso aparece la división por dos cifras, mira si el año anterior se trabajó por una.
+       La segunda, <strong>no invadir el curso siguiente</strong>: si algo aparece más adelante, con
+       llegar hasta donde te toca es suficiente.</p>
+    <p>En la vista <em>Evolución de un área</em> lo ves de un vistazo: cada fila es un contenido y
+       cada columna un curso.</p>
+    <div class="aviso a-ok" style="margin-bottom:0"><strong>En las reuniones de ciclo</strong>
+      Es el material para hablar del tránsito entre cursos y para acordar qué se deja consolidado
+      antes de pasar de ciclo. Los equipos de ciclo lo revisan al principio de curso.</div>
+  </div></details>
+
+  <details><summary>¿De dónde sale esta secuenciación?</summary><div class="details-body">
+    <p>De los saberes básicos del <strong>Decreto 101/2023</strong> y la <strong>Orden de 30 de mayo
+       de 2023</strong>, que reparten por ciclo, y de la concreción que hace el centro para bajarlos
+       a cada curso. Los criterios de evaluación oficiales, con la redacción de Séneca, están en el
+       Portal de Transparencia de la web y en la zona de profesorado.</p>
+    <p>Ojo con Matemáticas: sus criterios LOMLOE hablan de procesos (resolver, conjeturar, conectar,
+       comunicar), no de contenidos. El contenido está en los saberes básicos, que es lo que recoge
+       esta tabla.</p>
+  </div></details>
+
+  <div class="descarga">
+    <div class="doc" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8c2f39" stroke-width="1.8"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15l3 3 3-3"/>
+      </svg>
+    </div>
+    <div class="txt">
+      <b>Mapa de progresión de contenidos</b>
+      <span>Las seis áreas en tablas apaisadas: una fila por contenido y una columna por curso. Para imprimir y llevar a la reunión de ciclo.</span>
+    </div>
+    <a class="btn" href="descargas/Mapa_progresion_contenidos.pdf"
+       download="Mapa de progresion de contenidos - CEIP Capitulaciones.pdf">PDF</a>
+    <a class="btn" href="descargas/Mapa_progresion_contenidos.docx"
+       download="Mapa de progresion de contenidos - CEIP Capitulaciones.docx">Word</a>
+  </div>
+  <div class="descarga">
+    <div class="doc" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8c2f39" stroke-width="1.8"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15l3 3 3-3"/>
+      </svg>
+    </div>
+    <div class="txt">
+      <b>Qué se trabaja en cada curso · las seis fichas</b>
+      <span>Una hoja por curso con los contenidos de todas las áreas. Sirve para la reunión de principio de trimestre con las familias.</span>
+    </div>
+    <a class="btn" href="descargas/Que_se_trabaja_en_1_Primaria.pdf" download>1.º</a>
+    <a class="btn" href="descargas/Que_se_trabaja_en_2_Primaria.pdf" download>2.º</a>
+    <a class="btn" href="descargas/Que_se_trabaja_en_3_Primaria.pdf" download>3.º</a>
+    <a class="btn" href="descargas/Que_se_trabaja_en_4_Primaria.pdf" download>4.º</a>
+    <a class="btn" href="descargas/Que_se_trabaja_en_5_Primaria.pdf" download>5.º</a>
+    <a class="btn" href="descargas/Que_se_trabaja_en_6_Primaria.pdf" download>6.º</a>
+  </div>
+</section>
+
+<!-- 15 --------------------------------------------------------------->
 <section id="donde">
-  <h2><span class="num">14</span> Dónde está cada cosa</h2>
+  <h2><span class="num">15</span> Dónde está cada cosa</h2>
 
   <details><summary>Necesito el detalle. ¿Qué documento abro?</summary><div class="details-body">
     <div class="tabla-wrap">
@@ -983,7 +1111,7 @@ a{color:var(--vino)}
 
 <!-- 15 --------------------------------------------------------------->
 <section id="acogida">
-  <h2><span class="num">15</span> Acogida del alumnado</h2>
+  <h2><span class="num">16</span> Acogida del alumnado</h2>
 
   <details><summary>¿Cómo se recibe al alumnado de 3 años?</summary><div class="details-body">
     <ol class="pasos">
@@ -1014,7 +1142,7 @@ a{color:var(--vino)}
 
 <!-- 16 --------------------------------------------------------------->
 <section id="apps">
-  <h2><span class="num">16</span> Las herramientas del centro</h2>
+  <h2><span class="num">17</span> Las herramientas del centro</h2>
 
   <details><summary>¿Qué aplicaciones propias hay y para qué sirven?</summary><div class="details-body">
     <p>Profesorado del centro ha desarrollado varias aplicaciones. <strong>Su uso es
@@ -1049,7 +1177,7 @@ a{color:var(--vino)}
 
 <!-- 17 --------------------------------------------------------------->
 <section id="faq">
-  <h2><span class="num">17</span> Dudas frecuentes</h2>
+  <h2><span class="num">18</span> Dudas frecuentes</h2>
   <p class="sub">Las que más se repiten en la sala de profesores.</p>
 
   <details><summary>¿Puedo poner exámenes?</summary><div class="details-body">
@@ -1125,7 +1253,7 @@ a{color:var(--vino)}
 
 <!-- 18 --------------------------------------------------------------->
 <section id="errores">
-  <h2><span class="num">18</span> Los errores más frecuentes</h2>
+  <h2><span class="num">19</span> Los errores más frecuentes</h2>
 
   <details><summary>¿En qué se falla más?</summary><div class="details-body">
     <ul class="check">
@@ -1152,6 +1280,103 @@ a{color:var(--vino)}
      haga falta el detalle, manda el documento original.</p>
   <p>CEIP Capitulaciones · Santa Fe (Granada) · Revisión del Plan de Centro</p>
 </footer>
+
+<script>
+/* Mapa de contenidos por curso · datos del centro (mismos que la web) */
+var SEC_DATOS = {"MAT":{"n":"Matemáticas","f":[["Numeración","Números 0–99. Conteo, la decena, comparar y ordenar. Valor de las cifras (D y U).","Números hasta 999. La centena. Ordinales. Pares e impares. Series numéricas.","Números de 4 y 5 cifras. Valor posicional. Aproximaciones a la decena y centena.","Números hasta 6 cifras. Redondeo. Números romanos (introducción).","Números hasta 7 cifras y millones. Potencias de base 10 como apoyo. Múltiplos y divisores.","Grandes números. Múltiplos, divisores, criterios de divisibilidad, primos y compuestos. Números enteros en contextos (temperaturas, ascensor)."],["Suma y resta","Sumas y restas hasta 99. Con llevada al final de curso. Cálculo mental básico (+1, +10).","Suma y resta con llevada hasta 999. Prueba de la resta. Problemas de una operación.","Suma y resta con llevada con números grandes. Estimación de resultados. Propiedades conmutativa y asociativa.","Automatización total. Sumas y restas combinadas con paréntesis. Estrategias de cálculo mental.","Con decimales y fracciones. Operaciones combinadas respetando la jerarquía.","Dominio completo en naturales, decimales y fracciones. Uso reflexivo de la calculadora."],["Multiplicación","— (preparación: agrupamientos, series de 2 en 2, de 5 en 5).","Concepto de multiplicación como suma repetida. Tablas del 2, 3, 4 y 5. El doble.","Todas las tablas. Multiplicación por una y dos cifras. Multiplicar por 10, 100, 1000.","Multiplicación por dos y tres cifras. Propiedades. Factor común (introducción).","Multiplicación con decimales. Estimaciones y comprobación de resultados.","Dominio en todos los conjuntos numéricos. Potencias como producto de factores iguales (introducción)."],["División","— (preparación: repartos manipulativos).","Concepto de reparto: repartos exactos e inexactos con material.","División exacta e inexacta por una cifra. Relación multiplicación-división. La mitad, el tercio.","División por dos cifras. Prueba de la división. Problemas de dos operaciones.","División por dos y tres cifras. División con decimales en el dividendo.","División con decimales en dividendo y divisor. Media aritmética."],["Fracciones y decimales","—","— (preparación: mitades y cuartos en contextos cotidianos).","Fracciones sencillas: mitad, tercio y cuarto. Lectura y representación.","Fracciones equivalentes. Comparación. Suma y resta con igual denominador. Números decimales: décimas y centésimas. El euro con decimales.","Operaciones con fracciones (distinto denominador con apoyos). Decimales: las cuatro operaciones. Relación fracción–decimal.","Fracción–decimal–porcentaje. Porcentajes y proporcionalidad directa. Problemas de descuentos e IVA."],["Medida","Longitud: el metro y comparaciones (más largo/corto). El reloj: horas en punto y media. Días y meses.","El euro: monedas y billetes. El calendario. El reloj: cuartos. Litro y kilo en contextos.","Longitud, capacidad y masa: unidades y conversiones sencillas. El reloj analógico y digital completo.","Conversiones entre unidades. Medidas de tiempo: horas, minutos, segundos; problemas. Perímetros.","Sistema métrico decimal completo. Unidades de superficie. Áreas de cuadrado, rectángulo y triángulo.","Superficie y volumen (introducción). Áreas de polígonos y círculo. Escalas y planos."],["Geometría","Figuras planas básicas y cuerpos (esfera, cubo). Líneas rectas y curvas. Nociones espaciales.","Polígonos: lados y vértices. Perímetro (conteo). Simetría con plegado.","Rectas paralelas y secantes. Ángulos: recto, agudo, obtuso. Clasificación de polígonos. Áreas por cuadrículas.","Ángulos: medida con transportador. Clasificación de triángulos y cuadriláteros. La circunferencia.","Áreas y perímetros con fórmulas. Cuerpos geométricos: prismas, pirámides, cuerpos redondos. Coordenadas cartesianas (primer cuadrante).","Área del círculo. Simetrías, traslaciones y giros. Planos y coordenadas. Volumen del ortoedro."],["Estadística y probabilidad","Recogida de datos con marcas. Pictogramas sencillos.","Tablas y gráficos de barras sencillos. Seguro, posible e imposible.","Interpretación y construcción de gráficos de barras. Azar: más y menos probable.","Gráficos de barras dobles y de líneas. Frecuencias. Experimentos de azar sencillos.","Media y moda. Gráficos de líneas y sectores (lectura). Probabilidad como fracción (regla de Laplace, introducción).","Media, moda, mediana y rango. Gráficos de sectores. Probabilidad: regla de Laplace. Análisis crítico de datos."],["Resolución de problemas","Problemas orales y manipulativos de una operación (suma/resta). Representar con dibujos y materiales.","Problemas de una y dos operaciones (suma, resta, multiplicación inicial). Identificar datos y pregunta.","Problemas de las cuatro operaciones. Elegir la operación. Inventar problemas a partir de datos.","Problemas de dos o más operaciones. Estrategias: ensayo-error, hacer un dibujo, buscar patrones. Comprobar la coherencia.","Problemas con fracciones, decimales y medidas. Seleccionar y justificar la estrategia. Estimar antes de operar.","Problemas de varios pasos con porcentajes y proporcionalidad. Argumentar la solución y revisar el proceso. Pequeñas investigaciones matemáticas."]]},"LCL":{"n":"Lengua Castellana y Literatura","f":[["Lectura y escritura (código)","Vocales y consonantes por grupos (m, p, s, l… hasta completar). Lectura silábica y de palabras. Sílabas directas.","Abecedario completo. Sílabas directas, inversas y trabadas. Lectura de frases y textos cortos con fluidez inicial.","Lectura fluida en voz alta. Entonación en enunciados e interrogaciones. La sílaba: separación.","Lectura expresiva. Velocidad y precisión adecuadas al nivel. Sílaba tónica y átona.","Fluidez consolidada. Lectura silenciosa eficaz para aprender.","Lectura autónoma de textos extensos. Adecuación de la velocidad al propósito."],["Comprensión y tipos de texto","El cuento: personajes y lo que ocurre. Textos informativos muy sencillos. Fábulas y rimas.","Textos instructivos (la receta), descriptivos, narrativos e informativos sencillos. El cómic.","La noticia, la receta, el cómic, el teatro, el poema y la carta. Idea principal.","El anuncio, la biografía, la leyenda, la entrevista, la fábula, el folleto y la noticia. Ideas principales y secundarias.","Textos expositivos y argumentativos sencillos. Resumen y esquema. Sentido figurado.","Textos de los medios de comunicación y digitales. Intención del autor. Lectura crítica: información frente a opinión."],["Expresión escrita","El nombre propio. Palabras y oraciones sencillas. Listas y títulos.","Oraciones completas. Descripciones de personas y animales. Textos breves con modelo.","Textos narrativos e instructivos con estructura (inicio, nudo, desenlace). El diálogo escrito.","Textos de varios párrafos. Planificar, escribir y revisar. La descripción detallada.","Textos expositivos y cartas. Borradores y revisión con criterios. Conectores.","Textos argumentativos y creativos. Proceso completo: planificación, textualización, revisión y edición (también digital)."],["Gramática","La oración como unidad. Concordancia intuitiva.","El sustantivo (género y número), el artículo, el adjetivo y el verbo (presente, pasado, futuro). El adverbio (iniciación).","Determinantes y pronombres. El verbo: conjugación básica. El adverbio.","El grupo nominal. Numerales y posesivos. Tiempos verbales simples. Sujeto y predicado. Los enlaces.","Clases de palabras completas. Tiempos compuestos (iniciación). Análisis de oraciones sencillas.","Análisis morfosintáctico básico. Complementos del verbo (iniciación). Oración simple completa."],["Ortografía","El punto y la mayúscula. Escritura correcta de palabras del vocabulario trabajado.","Mayúsculas en nombres propios. Signos de interrogación y exclamación. m antes de p y b.","c/qu, g/gu, r/rr, j/g. La coma en enumeraciones. Nombre propio.","Palabras agudas, llanas y esdrújulas: la tilde. Ortografía de los verbos. b/v, h.","Tilde diacrítica (iniciación). h intercalada. Puntuación del diálogo. y/ll, x.","Ortografía consolidada: tildes, grafías y todos los signos de puntuación. Revisión autónoma con apoyo de diccionarios y correctores."],["Comunicación oral","Escucha activa. Presentarse y expresar deseos y vivencias. Recitado de rimas.","Asamblea y turnos de palabra. Contar experiencias ordenadamente. Dramatizaciones sencillas.","Exposiciones breves con guion. Lectura expresiva ante el grupo. El diálogo y sus normas.","Exposiciones con apoyo visual. La entrevista. Debates guiados con respeto de turnos.","Exposiciones planificadas. Argumentar opiniones. Lenguaje no verbal.","Debates y presentaciones formales (también con medios digitales). Adecuar registro y tono a la situación."],["Literatura y biblioteca","Cuentos, fábulas y poemas escuchados y leídos. Biblioteca de aula: préstamo y cuidado.","Cuentos de estructura clara, poemas y trabalenguas. Memoria lectora: recitado.","Cuento, teatro y poesía: primeras convenciones (verso, personajes, escenas). Autores andaluces cercanos.","La leyenda y la fábula: la moraleja. Rima y verso. Itinerario lector personal.","Géneros literarios: narrativa, poesía y teatro. Recursos: comparación y metáfora. Clásicos adaptados.","Lectura de obras completas. Figuras literarias. Literatura andaluza y española: primeras referencias. Creación literaria propia."]]},"CMN":{"n":"Conocimiento del Medio Natural, Social y Cultural","f":[["Ciencia e indagación","Observar con los sentidos. Preguntas sencillas sobre el entorno. Vocabulario científico básico.","Pequeños experimentos guiados. Registro con dibujos y marcas. Predicciones sencillas.","Fases de una investigación guiada. Uso de instrumentos de medida y lupas. Comparar resultados con predicciones.","Experimentos con control de una variable (guiado). Tablas de registro. Conclusiones sencillas.","El método científico: hipótesis, experimentación y conclusiones. Informes sencillos de resultados.","Investigaciones con mayor autonomía. Análisis del error. Comunicación científica de resultados."],["El cuerpo y la salud","Partes del cuerpo. Los sentidos. Hábitos de higiene, alimentación y descanso.","Etapas de la vida. Alimentación saludable: origen de los alimentos. Emociones básicas.","Aparatos respiratorio y digestivo (función global). La dieta equilibrada. Prevención de accidentes.","Aparatos circulatorio, locomotor y excretor (función global). Salud postural y ejercicio. Gestión emocional.","Función de nutrición completa: aparatos implicados y su relación. Primeros auxilios básicos.","Función de relación y reproducción humana. Cambios en la pubertad. Salud mental, prevención de adicciones y pantallas."],["Seres vivos y ecosistemas","Seres vivos e inertes. Animales y plantas del entorno: características básicas. Cuidado de los seres vivos.","Clasificación sencilla de animales (vertebrados/invertebrados intuitivo). Partes de la planta. Mascotas y animales de granja.","Vertebrados: los cinco grupos. Las plantas: nutrición y reproducción (global). Cadenas alimentarias sencillas.","Invertebrados: grupos principales. La fotosíntesis (global). Ecosistemas cercanos: relaciones.","Los cinco reinos. Ecosistemas: componentes, relaciones y equilibrio. La célula (introducción).","Clasificación científica. Ecosistemas de Andalucía y España. Biodiversidad y su conservación. Impacto humano."],["Materia, energía y máquinas","Propiedades de los objetos: material, tamaño, textura. Flota o se hunde. Máquinas de casa.","Estados del agua. Mezclas sencillas. Máquinas simples en la vida diaria.","La materia y sus propiedades: masa y volumen. Cambios de estado. Fuerzas: empujar y tirar.","Energía: fuentes y usos. Luz y sonido: propiedades básicas. Máquinas y operadores (palanca, polea).","Materia: mezclas y separaciones. Energías renovables y no renovables. Electricidad: circuitos sencillos.","Cambios físicos y químicos. Electricidad y magnetismo. Máquinas y estructuras: proyecto de diseño. Ahorro energético."],["Tecnología y digitalización","Uso guiado de dispositivos del aula. Cuidado del material.","Encendido, apagado y programas sencillos. Primeros pasos de robótica educativa (direcciones).","Búsqueda guiada de información. Escritura digital sencilla. Secuencias de programación por bloques.","Búsquedas con criterios. Presentaciones sencillas. Programación por bloques: bucles. Seguridad digital básica.","Producción digital: documentos y presentaciones. Pensamiento computacional: condicionales. Identidad digital.","Proyectos digitales colaborativos. Robótica y programación: proyecto. Uso crítico y seguro: bulos, privacidad, huella digital."],["Geografía y espacio","Mi casa, mi calle, mi colegio. Orientación: delante/detrás, cerca/lejos. El tiempo atmosférico.","La localidad: Santa Fe y sus lugares. Paisajes de costa y de interior. Las estaciones.","Municipio, comarca y provincia. El plano y el mapa (iniciación). Relieve e hidrografía cercanos. Tiempo y clima.","Andalucía: provincias, relieve y ríos. Mapas: leyenda y escala gráfica. Los puntos cardinales y la brújula.","España: relieve, ríos y climas. Comunidades autónomas. Coordenadas geográficas (iniciación). La Tierra en el universo.","Europa y el mundo: mapa físico y político básico. La Unión Europea. Movimientos de la Tierra y la Luna. Cartografía digital (SIG escolar)."],["Historia y tiempo","Antes y después. Mi historia personal: la línea de mi vida. Fiestas y tradiciones cercanas.","Pasado, presente y futuro. La historia familiar: tres generaciones. Objetos de antes y de ahora.","La línea del tiempo. Formas de vida en la Prehistoria y en la Edad Antigua (rasgos básicos). Patrimonio local: las Capitulaciones.","Edad Media y Edad Moderna en rasgos básicos. Monumentos de Andalucía. Fuentes históricas: objetos, imágenes, testimonios.","Prehistoria, Edad Antigua y Edad Media en la Península. Al-Ándalus. Museos y patrimonio: interpretación.","Edad Moderna y Contemporánea en España. 1492 y Santa Fe en la historia. Mujeres y hombres relevantes. Memoria y patrimonio andaluz."],["Sociedad y ciudadanía","Normas de aula y familia. Profesiones cercanas. Compartir y cuidar lo común.","El barrio y sus servicios. Educación vial: el peatón. Consumo: necesidades y deseos.","El ayuntamiento y los servicios municipales. Trabajos y sectores (iniciación). Reciclaje y cuidado del entorno.","Organización de Andalucía: instituciones básicas. Sectores económicos. Publicidad y consumo responsable.","La Constitución y los derechos de la infancia. Organización de España. Dinero y ahorro. ODS: retos cercanos.","La Unión Europea y sus instituciones. Democracia y participación. Economía personal básica. Igualdad de género y convivencia. ODS y compromiso ecosocial."]]},"ING":{"n":"Inglés (Lengua Extranjera)","f":[["Comprensión oral","Rutinas de aula, saludos e instrucciones muy sencillas con gestos. Canciones y cuentos con apoyo visual.","Instrucciones de aula encadenadas. Identificar palabras conocidas en cuentos y canciones.","Idea global de mensajes breves sobre temas trabajados, con apoyos. Descripciones sencillas.","Información concreta en audiciones cortas (números, nombres, lugares). Diálogos sencillos grabados.","Idea principal y detalles en textos orales pausados sobre temas cercanos. Vídeos adaptados.","Comprensión de conversaciones y vídeos sencillos en lengua estándar. Estrategias: predecir, apoyarse en el contexto."],["Expresión oral","Saludos, presentarse, colores, números, respuestas de una palabra. Repetición de canciones y chants.","Frases hechas de aula (May I…?). Vocabulario de los temas con pronunciación comprensible.","Frases sencillas sobre sí mismo con modelo (I like…, I have…, There is…). Descripciones guiadas.","Presentaciones muy breves preparadas. Preguntas y respuestas trabajadas (Can you…? Where is…?).","Descripciones y narraciones breves con apoyo. Presente y pasado en fórmulas trabajadas.","Presentaciones preparadas de un minuto. Interacción en diálogos cotidianos (tienda, direcciones). Atención a ritmo y entonación."],["Lectura","Reconocer palabras trabajadas con apoyo de imagen.","Palabras y frases muy sencillas de los temas. Relacionar texto e imagen.","Frases y textos muy breves con vocabulario conocido. Instrucciones escritas sencillas.","Textos breves (postales, menús, carteles): información concreta. Cuentos adaptados con imágenes.","Textos sencillos sobre temas trabajados: idea global y datos. Lecturas graduadas.","Textos variados sencillos (emails, webs adaptadas, historias). Estrategias: palabras clave, cognados, contexto."],["Escritura","Copiar palabras trabajadas.","Escribir palabras y completar frases con modelo.","Frases sencillas con modelo sobre sí mismo y su entorno.","Textos muy breves guiados (una postal, una descripción) a partir de modelo.","Párrafos breves con conectores básicos (and, but, because). Revisión guiada.","Textos breves con finalidad (email, póster, descripción) con planificación y revisión. Herramientas digitales."],["Vocabulario y estructuras","Colores, números 1–10, familia, animales, objetos de clase. Verb to be en fórmulas.","Números hasta 20, cuerpo, comida, ropa, casa. Have got, like en fórmulas.","Números hasta 100, la hora (en punto), rutinas, tiempo atmosférico. Presente simple en fórmulas. There is/are.","Rutinas y horarios, lugares de la ciudad, preposiciones. Presente simple y continuo (uso guiado). Can/can't.","Comparativos, pasado de verbos frecuentes (fórmulas), adverbios de frecuencia. La hora completa.","Pasado simple (regulares e irregulares frecuentes), futuro con going to (fórmulas). Repertorio consolidado de la etapa."],["Interculturalidad","Fiestas señaladas (Halloween, Christmas) con canciones y manualidades.","Fiestas y costumbres de países de habla inglesa: comparación sencilla con las propias.","Vida cotidiana en otros países: colegio, comidas. Respeto por otras formas de vida.","Ciudades y símbolos del Reino Unido e Irlanda. Semejanzas y diferencias culturales.","Países de habla inglesa en el mundo. El inglés como lengua de comunicación internacional.","Diversidad cultural y lingüística: análisis de estereotipos. Proyectos de comunicación real (eTwinning, correspondencia escolar)."]]},"EFI":{"n":"Educación Física","f":[["Salud y vida activa","Higiene tras la actividad. Ropa adecuada. El juego activo diario.","Rutinas de calentamiento guiado. Hidratación. Posturas correctas.","El calentamiento: para qué sirve. Frecuencia cardiaca (nociones). Alimentación y ejercicio.","Calentamiento semiautónomo. Efectos del ejercicio en el cuerpo. Descanso y pantallas.","Planificación guiada de la propia actividad. Condición física: resistencia y flexibilidad de forma lúdica.","Calentamiento autónomo. Hábitos de vida activa propios. Primeros auxilios básicos y seguridad."],["Habilidades motrices","Desplazamientos, saltos y giros básicos. Esquema corporal y lateralidad.","Combinación de desplazamientos y saltos. Lanzamientos y recepciones estáticas.","Lanzamientos y recepciones en movimiento. Equilibrio estático y dinámico. Coordinación óculo-manual y óculo-pédica.","Habilidades combinadas en circuitos. Bote y conducciones. Trepas y suspensiones seguras.","Habilidades específicas aplicadas a juegos deportivos. Precisión en lanzamientos y golpeos.","Ajuste técnico en situaciones de juego real. Autonomía en la mejora de las propias habilidades."],["Juegos y deportes","Juegos sensoriales y de persecución. Aceptar las reglas.","Juegos cooperativos y populares. El respeto al resultado.","Juegos predeportivos: pase, recepción, desplazamiento. Juegos populares andaluces.","Iniciación deportiva: balonmano, baloncesto, fútbol (situaciones reducidas). Estrategias básicas de ataque y defensa.","Deportes colectivos e individuales adaptados. Roles: atacante, defensor, árbitro. Deporte limpio.","Situaciones de juego complejas. Organización de torneos de aula. Análisis táctico sencillo. Deporte inclusivo."],["Expresión corporal","El cuerpo como medio de expresión: imitaciones y bailes libres.","Dramatizaciones sencillas. Ritmos con el cuerpo (percusión corporal).","Danzas sencillas y coreografías cortas. Expresar emociones con el movimiento.","Bailes populares y andaluces. Creación guiada de coreografías por grupos.","Montajes expresivos con música. Acrosport básico.","Coreografías y montajes creados por el alumnado. Representaciones ante público."],["Convivencia y emociones","Turnos y cuidado del material. Nombrar emociones en el juego.","Ganar y perder: gestión emocional básica. Ayudar a los compañeros.","Resolución dialogada de conflictos del juego. Juego limpio.","Autorregulación en la competición. Inclusión: adaptar juegos para que participen todos.","Liderazgo positivo y trabajo en equipo. Rechazo de la violencia y la discriminación en el deporte.","Arbitraje y autoarbitraje. Igualdad de género en el deporte. Compromiso con el grupo."],["Medio natural","Juegos en el patio y espacios cercanos. Cuidado del entorno.","Recorridos y rastreos sencillos en el centro.","Juegos de pistas y orientación en el colegio.","Orientación con plano en espacios conocidos. Senderismo escolar.","Orientación con brújula (iniciación). Actividades en el medio natural: normas de seguridad.","Carreras de orientación. Actividades en la naturaleza con impacto mínimo. La Vega y Sierra Nevada como entornos."]]},"EAR":{"n":"Educación Artística","f":[["Plástica: percepción","Colores primarios. Formas básicas. Observar imágenes y obras cercanas.","Colores secundarios y mezclas. Texturas. Describir lo que se ve en una obra.","Colores fríos y cálidos. La línea y el punto como elementos. Obras del patrimonio andaluz.","Luz y sombra (iniciación). El plano y la composición. Análisis guiado de obras e imágenes publicitarias.","Perspectiva (iniciación). Proporción. Lectura crítica de imágenes y medios.","Estilos y autores relevantes (visión general). Análisis de obras: tema, técnica e intención. Arte contemporáneo y digital."],["Plástica: creación","Trazo, coloreado, recortado y pegado. Modelado libre.","Técnicas húmedas y secas básicas. Collage. Modelado con intención.","Dibujo del natural sencillo. Témpera: mezcla en la obra. Construcciones con material reciclado.","Proyectos plásticos guiados por fases (boceto y obra). Estampación y grabado sencillo.","Proyectos con técnica libre justificada. Fotografía e imagen digital (iniciación).","Proyecto artístico personal completo. Edición digital de imagen. Exposición y defensa de la obra."],["Música: lenguaje musical","Sonido y silencio. Cualidades: fuerte/suave, largo/corto, agudo/grave.","Figuras negra y silencio, corcheas (eco rítmico). Grafías no convencionales.","Pentagrama y notas (iniciación). Figuras: blanca, negra, corcheas. Compás binario.","Lectura de esquemas rítmicos y melódicos sencillos. Compases de 2, 3 y 4 tiempos.","Lectura y escritura de partituras sencillas. Matices y tempo. Familias de instrumentos.","Lenguaje musical funcional para interpretar. Formas musicales (rondó, canon). Audición de obras y compositores; el flamenco como patrimonio."],["Música: interpretación","Canciones al unísono. Percusión corporal y pequeña percusión.","Repertorio de aula con gestos y movimiento. Ostinatos rítmicos.","Flauta o placas (iniciación) según programación. Canon sencillo cantado.","Interpretación instrumental en grupo con partitura sencilla. Canto a dos voces (iniciación).","Conjunto instrumental de aula. Repertorio variado, incluido el folclore andaluz.","Montajes musicales completos (voz, instrumentos, movimiento). Creación e improvisación. Grabación y valoración de la propia interpretación."]]}};
+(function(){
+  'use strict';
+  var CURSOS = ['1.º','2.º','3.º','4.º','5.º','6.º'];
+  var ORDEN  = ['LCL','MAT','CMN','ING','EFI','EAR'];
+  var vista, selCurso, selArea, salida;
+
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function vacia(x){ return !x || x.trim() === '\u2014'; }
+
+  function pintarCurso(){
+    var i = parseInt(selCurso.value, 10), h = '';
+    ORDEN.forEach(function(k){
+      var a = SEC_DATOS[k]; if(!a) return;
+      var filas = a.f.filter(function(f){ return !vacia(f[i+1]); });
+      if(!filas.length) return;
+      h += '<div class="sc-area"><h4>' + esc(a.n) + '</h4><dl class="sc-lista">' +
+           filas.map(function(f){
+             return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[i+1]) + '</dd>'; }).join('') +
+           '</dl></div>';
+    });
+    salida.innerHTML = h;
+  }
+
+  function pintarArea(){
+    var a = SEC_DATOS[selArea.value]; if(!a){ salida.innerHTML=''; return; }
+    var h = '<div class="tabla-wrap"><table class="sc-tabla"><thead><tr><th>Contenido</th>' +
+            CURSOS.map(function(c){ return '<th scope="col">' + c + '</th>'; }).join('') +
+            '</tr></thead><tbody>';
+    a.f.forEach(function(f){
+      h += '<tr><th scope="row">' + esc(f[0]) + '</th>';
+      for(var i=1; i<=6; i++){
+        h += vacia(f[i]) ? '<td class="sc-no">\u2014</td>' : '<td>' + esc(f[i]) + '</td>';
+      }
+      h += '</tr>';
+    });
+    salida.innerHTML = h + '</tbody></table></div>';
+  }
+
+  function pintar(){
+    var porCurso = vista.value === 'curso';
+    document.getElementById('scCursoLabel').hidden = !porCurso;
+    document.getElementById('scAreaLabel').hidden  =  porCurso;
+    if(porCurso) pintarCurso(); else pintarArea();
+    actualizarDescarga(porCurso);
+  }
+
+  /* El botón de descarga sigue a lo que se está viendo: la ficha del curso
+     elegido, o el mapa completo de las seis áreas en la vista por área. */
+  function actualizarDescarga(porCurso){
+    var a = document.getElementById('scDescarga');
+    var txt = document.getElementById('scDescargaTxt');
+    if(!a) return;
+    if(porCurso){
+      var n = parseInt(selCurso.value, 10) + 1;
+      a.href = 'descargas/Que_se_trabaja_en_' + n + '_Primaria.pdf';
+      a.setAttribute('download', 'Que se trabaja en ' + n + '.\u00ba de Primaria - CEIP Capitulaciones.pdf');
+      txt.textContent = 'Descargar ' + n + '.\u00ba en PDF';
+    } else {
+      a.href = 'descargas/Mapa_progresion_contenidos.pdf';
+      a.setAttribute('download', 'Mapa de progresion de contenidos - CEIP Capitulaciones.pdf');
+      txt.textContent = 'Descargar el mapa completo';
+    }
+  }
+
+  function init(){
+    vista = document.getElementById('scVista');
+    selCurso = document.getElementById('scCurso');
+    selArea = document.getElementById('scArea');
+    salida = document.getElementById('scSalida');
+    if(!vista || !salida) return;
+
+    CURSOS.forEach(function(c, n){
+      var o = document.createElement('option');
+      o.value = n; o.textContent = c + ' de Primaria';
+      selCurso.appendChild(o);
+    });
+    ORDEN.forEach(function(k){
+      if(!SEC_DATOS[k]) return;
+      var o = document.createElement('option');
+      o.value = k; o.textContent = SEC_DATOS[k].n;
+      selArea.appendChild(o);
+    });
+    vista.addEventListener('change', pintar);
+    selCurso.addEventListener('change', pintar);
+    selArea.addEventListener('change', pintar);
+    pintar();
+  }
+
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
 
 <script>
 (function(){
