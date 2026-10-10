@@ -1,4 +1,4 @@
-const CACHE = 'capiguia-v3';
+const CACHE = 'capiguia-v3-b2610102005';
 const ASSETS = ['./', './index.html', './manifest.json',
                 './icon-192.png', './icon-512.png', './favicon.png',
                 './Como_trabajamos_lectura_y_problemas.docx',
